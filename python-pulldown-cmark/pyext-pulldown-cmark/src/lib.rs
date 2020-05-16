@@ -48,6 +48,8 @@ fn get_offsets(_py: Python, buffer: String) -> PyResult<&PyDict> {
             starts.set_item(i, data)?;
             i += 1;
         }
+        // we also need to handle Code, Html, FootnoteReference, Rule,
+        // SoftBreak, and HardBreak
     }
     Ok(starts)
 }
